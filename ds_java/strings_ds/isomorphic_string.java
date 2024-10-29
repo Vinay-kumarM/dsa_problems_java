@@ -27,9 +27,12 @@ public class isomorphic_string {
     }
 
     public static void main(String[] args) {
-        String str1 = "aac";
+        String str1 = "aac";//these are not isomorphic even the order should be matched
         String str2 = "xyy";
+         String str3= "xxy";
+        
         System.out.println(funt(str1, str2));
+System.out.println(funt(str1, str3));
     }
 
 }
