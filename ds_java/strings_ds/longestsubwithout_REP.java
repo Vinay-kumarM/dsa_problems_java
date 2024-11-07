@@ -27,6 +27,7 @@ public class longestsubwithout_REP {
                 arr[s.charAt(j)]++;
             }
             res = Math.max(res, len);
+             Arrays.fill(arr, 0);
         }
         System.out.println(res);
     }
