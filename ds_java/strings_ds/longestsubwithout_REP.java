@@ -5,13 +5,20 @@ import java.util.Arrays;
 public class longestsubwithout_REP {
     public static void funti(String s) {
         int arr[] = new int[256];
-        /*
-         * HashSet<Character> hs=new HashSet<>();
-         * int l=0,r=0;
-         * int res=0,temp=0;
-         * while(r<s.length()&&l<s.length()){
-         * if(hs.contains(s.charAt(r))){
-         * 
+        /*//correct and efficent 0(n);
+         *  int length=0;
+       int left=0;
+       HashSet<Character> hm=new HashSet<>();
+       for(int right=0;right<s.length();right++){
+           char c=s.charAt(right);
+           while(hm.contains(c)){
+               hm.remove(s.charAt(left));
+               left++;
+           }
+           hm.add(s.charAt(right));
+           length=Math.max(length,right-left+1);
+       }
+       return length;
          * }
          * }
          */
